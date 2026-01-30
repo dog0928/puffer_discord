@@ -1,0 +1,19 @@
+{
+  "name": "puffer_discord",
+  "module": "src/index.ts",
+  "type": "module",
+	"scripts": {
+		"start": "bun run src/index.ts",
+		"dev": "bun --watch src/index.ts",
+		"deploy": "bun src/deploy-commands.ts"
+	},
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1"
+  }
+}
