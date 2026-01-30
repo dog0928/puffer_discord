@@ -88,4 +88,3 @@ Docs:
 
 MIT License
 
-```
