@@ -25,7 +25,8 @@
 	"presence": {
 		"activity": {
 			"running": "🟢サーバー稼働中",
-			"stopping": "🔴サーバー停止中"
+			"stopping": "🔴サーバー停止中",
+			"error": "⚠️ステータスを取得できません"
 		}
 	}
 }

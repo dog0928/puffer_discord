@@ -25,7 +25,8 @@
 	"presence": {
 		"activity": {
 			"running": "🟢Server running",
-			"stopping": "🔴Server stopping"
+			"stopping": "🔴Server stopping",
+			"error": "⚠️Unable to retrieve status"
 		}
 	}
 }
