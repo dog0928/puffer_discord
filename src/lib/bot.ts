@@ -25,7 +25,7 @@ async function setBotActivity(client: Client<true>) {
 		client.user.setStatus(PresenceUpdateStatus.Online);
 	} catch (error) {
 		console.error("Error setting bot activity:", error);
-		client.user.setActivity(`Get Status Error`, {
+		client.user.setActivity(msg("presence.activity.error"), {
 			type: ActivityType.Watching,
 		});
 		client.user.setStatus(PresenceUpdateStatus.Idle);
