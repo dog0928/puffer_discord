@@ -2,12 +2,13 @@
   "name": "puffer_discord",
   "module": "src/index.ts",
   "type": "module",
-	"scripts": {
-		"start": "bun run src/index.ts",
-		"dev": "bun --watch src/index.ts",
-		"deploy": "bun src/deploy-commands.ts"
-	},
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "deploy": "bun src/deploy-commands.ts"
+  },
   "devDependencies": {
+    "@biomejs/biome": "2.3.13",
     "@types/bun": "latest"
   },
   "peerDependencies": {

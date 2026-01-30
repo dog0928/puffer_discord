@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { Client, Collection, Events, GatewayIntentBits, MessageFlags } from "discord.js";
+import { Client, Collection, Events, GatewayIntentBits, MessageFlags, type ChatInputCommandInteraction } from "discord.js";
 import setBotActivity from "@/lib/bot";
 
 const client = new Client({
@@ -14,9 +14,9 @@ client.once(Events.ClientReady, async (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 
   console.log("=== Local Loaded Commands ===");
-  for (const [name] of (client as any).commands) console.log(`- ${name}`);
+  for (const [name] of (client as ChatInputCommandInteraction).commands) console.log(`- ${name}`);
 
-  const guildId = process.env.DISCORD_GUILD_ID!;
+  const guildId = process.env.DISCORD_GUILD_ID;
   const guild = await readyClient.guilds.fetch(guildId);
   const guildCommands = await guild.commands.fetch();
 
@@ -26,14 +26,14 @@ client.once(Events.ClientReady, async (readyClient) => {
   }
 
   await readyClient.application?.fetch();
-  const globalCommands = await readyClient.application!.commands.fetch();
+  const globalCommands = await readyClient.application?.commands.fetch();
   console.log("=== Global Application Commands (Discord side) ===");
   for (const [id, cmd] of globalCommands) console.log(`- ${cmd.name} (id=${id})`);
 
 	void setBotActivity(client);
 
 	const updateStatus: number = 5 * 60 * 1000;
-	const timer = setInterval(async () => {
+	const _timer = setInterval(async () => {
 		void setBotActivity(client);
 	}, updateStatus);
 });
@@ -54,7 +54,7 @@ for (const folder of commandFolders) {
     const command = loaded?.default ?? loaded;
 
     if (command && "data" in command && "execute" in command) {
-      (client as any).commands.set(command.data.name, command);
+      (client as ChatInputCommandInteraction).commands.set(command.data.name, command);
     } else {
       console.log(
         `[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`
@@ -66,7 +66,7 @@ for (const folder of commandFolders) {
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  const command = (interaction.client as any).commands.get(interaction.commandName);
+  const command = (interaction.client as ChatInputCommandInteraction).commands.get(interaction.commandName);
 
   if (!command) {
     console.error(`No command matching ${interaction.commandName} was found.`);

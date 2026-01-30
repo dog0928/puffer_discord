@@ -7,4 +7,3 @@ test("get token", async () => {
 	const response = await puffer.get();
 	expect(response.statusCode).toBe(200);
 });
-
