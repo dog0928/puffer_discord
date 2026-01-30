@@ -1,0 +1,31 @@
+{
+	"commands": {
+		"start": {
+			"reply": {
+				"success": "🟢Server started successfully. Status: {statusCode}",
+				"failed": "🔴Failed to start the server. Status: {statusCode}"
+			},
+			"description": "Starts the server."
+		},
+		"stop": {
+			"reply": {
+				"success": "🔴Server stopped successfully. Status: {statusCode}",
+				"failed": "🟢Failed to stop the server. Status: {statusCode}"
+			},
+			"description": "Stops the server."
+		},
+		"status": {
+			"reply": {
+				"running": "🟢The server is currently running.",
+				"stopped": "🔴The server is currently stopped."
+			},
+			"description": "Checks the current status of the server."
+		}
+	},
+	"presence": {
+		"activity": {
+			"running": "🟢Server running",
+			"stopping": "🔴Server stopping"
+		}
+	}
+}

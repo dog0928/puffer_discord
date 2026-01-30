@@ -1,0 +1,31 @@
+{
+	"commands": {
+		"start": {
+			"reply": {
+				"success": "🟢サーバーを起動しました。",
+				"failed": "🔴サーバーの起動に失敗しました。"
+			},
+			"description": "サーバーを起動します。"
+		},
+		"stop": {
+			"reply": {
+				"success": "🔴サーバーを停止しました。",
+				"failed": "🟢サーバーの停止に失敗しました。"
+			},
+			"description": "サーバーを停止します。"
+		},
+		"status": {
+			"reply": {
+				"running": "🟢サーバーは現在稼働中です。",
+				"stopped": "🔴サーバーは現在停止中です。"
+			},
+			"description": "サーバーの現在の状態を確認します。"
+		}
+	},
+	"presence": {
+		"activity": {
+			"starting": "🟢サーバー稼働中",
+			"stopping": "🔴サーバー停止中"
+		}
+	}
+}
