@@ -89,6 +89,5 @@ Docs:
 MIT License
 
 ```
-::contentReference[oaicite:0]{index=0}
 ```
 
