@@ -1,4 +1,4 @@
-````md
+
 # puffer_discord
 
 Discord bot to manage PufferPanel game server instances.
@@ -87,7 +87,4 @@ Docs:
 ## License
 
 MIT License
-
-```
-```
 
