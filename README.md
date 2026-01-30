@@ -16,7 +16,7 @@ bun run index.ts
 Use Docker:
 
 ```bash
-docker compose up --d
+docker compose up -d
 ```
 
 This project was created using `bun init` in bun v1.1.40. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
