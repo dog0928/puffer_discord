@@ -9,8 +9,8 @@
 		},
 		"stop": {
 			"reply": {
-				"success": "🔴Server stopped successfully. Status: {statusCode}",
-				"failed": "🟢Failed to stop the server. Status: {statusCode}"
+				"success": "🟢Server stopped successfully. Status: {statusCode}",
+				"failed": "🔴Failed to stop the server. Status: {statusCode}"
 			},
 			"description": "Stops the server."
 		},
