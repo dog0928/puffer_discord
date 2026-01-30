@@ -2,15 +2,15 @@
 	"commands": {
 		"start": {
 			"reply": {
-				"success": "🟢サーバーを起動しました。",
-				"failed": "🔴サーバーの起動に失敗しました。"
+				"success": "🟢サーバーを起動しました。 ステータス: {statusCode}",
+				"failed": "🔴サーバーの起動に失敗しました。 ステータス: {statusCode}"
 			},
 			"description": "サーバーを起動します。"
 		},
 		"stop": {
 			"reply": {
-				"success": "🔴サーバーを停止しました。",
-				"failed": "🟢サーバーの停止に失敗しました。"
+				"success": "🔴サーバーを停止しました。 ステータス: {statusCode}",
+				"failed": "🟢サーバーの停止に失敗しました。 ステータス: {statusCode}"
 			},
 			"description": "サーバーを停止します。"
 		},
